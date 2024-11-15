@@ -1,0 +1,13 @@
+# docker-compose.yml
+
+version: '3'
+services:
+  app:
+    build: .
+    ports:
+      - "9000:9000"
+    environment:
+      - NODE_ENV=development
+    volumes:
+      - .:/usr/src/app
+      - /usr/src/app/node_modules
